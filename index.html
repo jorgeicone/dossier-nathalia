@@ -25,51 +25,54 @@
   <link rel="icon" href="mentor.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,500;1,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet" />
   <style>
     /* ============================================
-       ICONE ialabs — Design Tokens
+       Simoné — Nathalia Velasco · Design Tokens
+       Paleta y tipografía del Manual de Marca
     ============================================ */
     :root {
-      --navy:         #050d1f;
-      --bg-deep:      #030814;
-      --bg-card:      #0a1530;
-      --bg-card-hover:#0e1e40;
-      --cyan:         #00d4ff;
-      --cyan-soft:    #4ee0ff;
-      --purple:       #7b2fff;
-      --purple-soft:  #a06bff;
-      --orange:       #ff8c00;
-      --orange-soft:  #ffa940;
-      --gold:         #ff8c00;
-      --gold-soft:    #ffa940;
-      --green:        #00d48a;
-      --red:          #ff4757;
+      /* Paleta Manual de Marca Nathalia Velasco — teal oscuro + naranjas terrosos */
+      --navy:         #0B3B3D;  /* teal oscuro · color principal de marca */
+      --bg-deep:      #062B2D;  /* teal más profundo · fondo base */
+      --bg-card:      #11484A;  /* teal card */
+      --bg-card-hover:#155558;
+      --cyan:         #219EA4;  /* esmeralda · acento principal (antes cyan) */
+      --cyan-soft:    #4FB8BC;
+      --purple:       #167074;  /* teal medio · acento secundario (antes purple) */
+      --purple-soft:  #4A9094;
+      --orange:       #F7991E;  /* naranja Nathalia · CTA y pills */
+      --orange-soft:  #FFB04A;
+      --gold:         #CD4E1F;  /* terracotta velasco · acento cálido */
+      --gold-soft:    #F6A27A;  /* peach */
+      --green:        #167074;  /* teal medio para checks */
+      --red:          #CD4E1F;  /* terracotta para alertas */
       --white:        #ffffff;
-      --text:         #e8eaf6;
-      --text-muted:   #7986cb;
-      --text-soft:    #a4adcc;
-      --border:       rgba(0, 212, 255, 0.16);
-      --border-hover: rgba(0, 212, 255, 0.42);
-      --card-bg:      rgba(255, 255, 255, 0.03);
-      --card-bg-hov:  rgba(255, 255, 255, 0.05);
-      --glow-cyan:    0 0 36px rgba(0, 212, 255, 0.22), 0 0 10px rgba(0, 212, 255, 0.14);
-      --glow-purple:  0 0 36px rgba(123, 47, 255, 0.22), 0 0 10px rgba(123, 47, 255, 0.14);
-      --glow-orange:  0 0 30px rgba(255, 140, 0, 0.36);
-      --grad-title:   linear-gradient(135deg, #00d4ff 0%, #7b2fff 100%);
-      --grad-accent:  linear-gradient(135deg, #00d4ff 0%, #00d48a 100%);
-      --grad-orange:  linear-gradient(135deg, #ff8c00 0%, #ff4757 100%);
-      --grad-gold:    linear-gradient(135deg, #ffa940 0%, #ff8c00 100%);
-      --grad-mesh:    radial-gradient(at 20% 20%, rgba(0, 212, 255, 0.10) 0%, transparent 50%),
-                      radial-gradient(at 80% 30%, rgba(123, 47, 255, 0.09) 0%, transparent 50%),
-                      radial-gradient(at 50% 80%, rgba(255, 140, 0, 0.06) 0%, transparent 50%);
+      --text:         #F1EDE7;  /* crema clara · texto principal sobre teal */
+      --text-muted:   #A8C8CA;  /* verde claro · texto secundario */
+      --text-soft:    #C8D8DA;  /* gris-verde claro · texto terciario */
+      --border:       rgba(33, 158, 164, 0.20);
+      --border-hover: rgba(247, 153, 30, 0.45);
+      --card-bg:      rgba(255, 255, 255, 0.04);
+      --card-bg-hov:  rgba(255, 255, 255, 0.07);
+      --glow-cyan:    0 0 36px rgba(33, 158, 164, 0.22), 0 0 10px rgba(33, 158, 164, 0.14);
+      --glow-purple:  0 0 36px rgba(22, 112, 116, 0.22), 0 0 10px rgba(22, 112, 116, 0.14);
+      --glow-orange:  0 0 30px rgba(247, 153, 30, 0.36);
+      --grad-title:   linear-gradient(135deg, #4FB8BC 0%, #F6A27A 100%);
+      --grad-accent:  linear-gradient(135deg, #219EA4 0%, #167074 100%);
+      --grad-orange:  linear-gradient(135deg, #F7991E 0%, #CD4E1F 100%);
+      --grad-gold:    linear-gradient(135deg, #F6A27A 0%, #F7991E 100%);
+      --grad-mesh:    radial-gradient(at 20% 20%, rgba(33, 158, 164, 0.10) 0%, transparent 50%),
+                      radial-gradient(at 80% 30%, rgba(247, 153, 30, 0.08) 0%, transparent 50%),
+                      radial-gradient(at 50% 80%, rgba(205, 78, 31, 0.06) 0%, transparent 50%);
       --radius:       16px;
       --radius-sm:    8px;
       --radius-lg:    24px;
       --transition:   0.3s cubic-bezier(0.4, 0, 0.2, 1);
       --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-      --font:         'Inter', system-ui, -apple-system, sans-serif;
-      --font-display: 'Playfair Display', 'Inter', serif;
+      --font:         'Raleway', system-ui, -apple-system, sans-serif;
+      --font-display: 'Raleway', sans-serif;
+      --font-script:  'Dancing Script', cursive;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -94,7 +97,7 @@
     }
     a { color: inherit; text-decoration: none; }
     img { max-width: 100%; display: block; }
-    ::selection { background: rgba(0, 212, 255, 0.3); color: var(--white); }
+    ::selection { background: rgba(33, 158, 164, 0.3); color: var(--white); }
 
     /* Floating decorative blobs */
     .blob {
@@ -155,8 +158,8 @@
       letter-spacing: 1.4px;
       text-transform: uppercase;
       color: var(--orange);
-      background: rgba(255, 140, 0, 0.10);
-      border: 1px solid rgba(255, 140, 0, 0.34);
+      background: rgba(247, 153, 30, 0.10);
+      border: 1px solid rgba(247, 153, 30, 0.34);
       padding: 4px 10px;
       border-radius: 999px;
       margin-left: 2px;
@@ -171,8 +174,8 @@
       animation: glowPulse 3s infinite;
     }
     @keyframes glowPulse {
-      0%, 100% { box-shadow: 0 0 12px rgba(0, 212, 255, 0.4); }
-      50% { box-shadow: 0 0 24px rgba(0, 212, 255, 0.8), 0 0 8px rgba(123, 47, 255, 0.5); }
+      0%, 100% { box-shadow: 0 0 12px rgba(33, 158, 164, 0.4); }
+      50% { box-shadow: 0 0 24px rgba(33, 158, 164, 0.8), 0 0 8px rgba(22, 112, 116, 0.5); }
     }
     .top-bar-links { display: flex; gap: 22px; font-size: 13px; color: var(--text-muted); }
     .top-bar-links a { transition: color var(--transition); }
@@ -208,7 +211,7 @@
     @media (max-width: 820px) { .top-bar-links { display: none; } .top-bar-icons { display: none; } }
 
     /* ============================================
-       Ecosistema ICONE (conecta web + LinkedIn + estudiantes)
+       Ecosistema Simoné (conecta Linktree + LinkedIn + Instagram)
     ============================================ */
     .ecosystem {
       max-width: 1100px;
@@ -292,7 +295,7 @@
       padding: 8px 16px;
       border: 1px solid var(--border);
       border-radius: 50px;
-      background: linear-gradient(90deg, rgba(0, 212, 255, 0.08), rgba(123, 47, 255, 0.05));
+      background: linear-gradient(90deg, rgba(33, 158, 164, 0.08), rgba(22, 112, 116, 0.05));
     }
     .hero .eyebrow .pulse-dot {
       width: 7px; height: 7px;
@@ -364,10 +367,10 @@
       background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
       transition: left 0.6s;
     }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 48px rgba(255,140,0,0.55); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 48px rgba(247,153,30,0.55); }
     .btn-primary:hover::before { left: 100%; }
     .btn-secondary { background: transparent; color: var(--cyan); border: 1px solid var(--border-hover); }
-    .btn-secondary:hover { background: rgba(0,212,255,0.08); transform: translateY(-2px); }
+    .btn-secondary:hover { background: rgba(33,158,164,0.08); transform: translateY(-2px); }
     .btn-ghost { background: transparent; color: var(--text-muted); padding: 13px 16px; }
     .btn-ghost:hover { color: var(--cyan); }
 
@@ -384,7 +387,7 @@
       aspect-ratio: 1 / 1.1;
       border-radius: 50% 50% 18px 18px;
       overflow: hidden;
-      background: linear-gradient(180deg, rgba(0,212,255,0.15) 0%, transparent 100%);
+      background: linear-gradient(180deg, rgba(33,158,164,0.15) 0%, transparent 100%);
       box-shadow: var(--glow-cyan), 0 30px 80px rgba(0, 0, 0, 0.4);
     }
     .hero-photo-frame::before {
@@ -446,7 +449,7 @@
       margin: 30px auto 0;
       padding: 56px 48px;
       background:
-        radial-gradient(circle at 20% 0%, rgba(0, 212, 255, 0.08), transparent 50%),
+        radial-gradient(circle at 20% 0%, rgba(33, 158, 164, 0.08), transparent 50%),
         var(--card-bg);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
@@ -483,7 +486,7 @@
       margin: 70px 0 30px;
       padding: 32px 28px;
       background:
-        linear-gradient(135deg, rgba(0,212,255,0.04), rgba(123,47,255,0.04)),
+        linear-gradient(135deg, rgba(33,158,164,0.04), rgba(22,112,116,0.04)),
         var(--card-bg);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
@@ -538,7 +541,7 @@
       padding: 5px 14px;
       border: 1px solid var(--border);
       border-radius: 50px;
-      background: rgba(0, 212, 255, 0.05);
+      background: rgba(33, 158, 164, 0.05);
     }
     .section-title {
       font-size: clamp(32px, 5vw, 50px);
@@ -553,9 +556,27 @@
       -webkit-text-fill-color: transparent;
     }
     .section-title .italic {
-      font-family: var(--font-display);
-      font-style: italic;
-      font-weight: 500;
+      font-family: var(--font-script);
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.15em;
+      letter-spacing: 0;
+    }
+    /* Patrón "NATHALIA velasco" del Manual de Marca aplicado al hero */
+    .hero-text h1 .script {
+      font-family: var(--font-script);
+      font-weight: 600;
+      font-style: normal;
+      font-size: 0.95em;
+      letter-spacing: 0;
+      display: inline-block;
+      margin-left: 4px;
+    }
+    .hero-text h1 .uppercase-brand {
+      font-family: var(--font);
+      font-weight: 800;
+      letter-spacing: 8px;
+      text-transform: uppercase;
     }
     .section-subtitle {
       font-size: 17px;
@@ -591,17 +612,17 @@
       border-radius: 50%;
       background: var(--navy);
       border: 2px solid var(--cyan);
-      box-shadow: 0 0 0 5px rgba(0, 212, 255, 0.12);
+      box-shadow: 0 0 0 5px rgba(33, 158, 164, 0.12);
       transition: var(--transition);
     }
     .tl-item:hover::before {
       transform: scale(1.2);
-      box-shadow: 0 0 0 8px rgba(0, 212, 255, 0.18);
+      box-shadow: 0 0 0 8px rgba(33, 158, 164, 0.18);
     }
     .tl-item.active::before {
       background: var(--orange);
       border-color: var(--orange);
-      box-shadow: 0 0 0 5px rgba(255, 140, 0, 0.20), var(--glow-orange);
+      box-shadow: 0 0 0 5px rgba(247, 153, 30, 0.20), var(--glow-orange);
     }
     .tl-period {
       font-size: 12px; color: var(--cyan); font-weight: 700;
@@ -626,7 +647,7 @@
     }
     .role-card {
       background:
-        linear-gradient(135deg, rgba(0, 212, 255, 0.04), transparent 60%),
+        linear-gradient(135deg, rgba(33, 158, 164, 0.04), transparent 60%),
         var(--card-bg);
       border: 1px solid var(--border);
       border-radius: var(--radius);
@@ -652,7 +673,7 @@
     .role-card:hover::before { height: 100%; }
     .role-icon {
       width: 46px; height: 46px;
-      background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(123, 47, 255, 0.10));
+      background: linear-gradient(135deg, rgba(33, 158, 164, 0.15), rgba(22, 112, 116, 0.10));
       border-radius: 12px;
       display: flex; align-items: center; justify-content: center;
       font-size: 22px;
@@ -714,7 +735,7 @@
     }
     .case-card {
       background:
-        linear-gradient(135deg, rgba(0, 212, 255, 0.03), rgba(123, 47, 255, 0.03)),
+        linear-gradient(135deg, rgba(33, 158, 164, 0.03), rgba(22, 112, 116, 0.03)),
         var(--card-bg);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
@@ -730,7 +751,7 @@
       position: absolute;
       top: -40px; right: -40px;
       width: 120px; height: 120px;
-      background: radial-gradient(circle, rgba(0, 212, 255, 0.15), transparent 70%);
+      background: radial-gradient(circle, rgba(33, 158, 164, 0.15), transparent 70%);
       filter: blur(20px);
       opacity: 0;
       transition: opacity var(--transition-slow);
@@ -780,7 +801,7 @@
       padding: 9px 18px;
       border-radius: 50px;
       font-size: 13px; font-weight: 600;
-      background: rgba(0, 212, 255, 0.05);
+      background: rgba(33, 158, 164, 0.05);
       border: 1px solid var(--border);
       color: var(--text);
       transition: var(--transition);
@@ -789,7 +810,7 @@
       gap: 6px;
     }
     .sector-pill:hover {
-      background: rgba(0, 212, 255, 0.12);
+      background: rgba(33, 158, 164, 0.12);
       border-color: var(--cyan);
       transform: translateY(-2px);
     }
@@ -812,11 +833,11 @@
     }
     .stack-item:hover {
       border-color: var(--cyan);
-      background: rgba(0, 212, 255, 0.05);
+      background: rgba(33, 158, 164, 0.05);
       transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+      box-shadow: 0 10px 30px rgba(33, 158, 164, 0.1);
     }
-    .stack-icon { font-size: 30px; margin-bottom: 10px; filter: drop-shadow(0 0 10px rgba(0,212,255,0.3)); }
+    .stack-icon { font-size: 30px; margin-bottom: 10px; filter: drop-shadow(0 0 10px rgba(33,158,164,0.3)); }
     .stack-name { font-size: 13px; font-weight: 700; color: var(--white); margin-bottom: 2px; }
     .stack-type { font-size: 10.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
 
@@ -829,7 +850,7 @@
       gap: 20px;
     }
     .thought-card {
-      background: linear-gradient(135deg, rgba(0, 212, 255, 0.06) 0%, rgba(123, 47, 255, 0.06) 100%);
+      background: linear-gradient(135deg, rgba(33, 158, 164, 0.06) 0%, rgba(22, 112, 116, 0.06) 100%);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 30px;
@@ -859,7 +880,7 @@
        Showcase
     ============================================ */
     .showcase {
-      background: linear-gradient(135deg, rgba(123, 47, 255, 0.10) 0%, rgba(0, 212, 138, 0.06) 100%);
+      background: linear-gradient(135deg, rgba(22, 112, 116, 0.10) 0%, rgba(0, 212, 138, 0.06) 100%);
       border: 1px solid var(--border-hover);
       border-radius: var(--radius-lg);
       padding: 50px;
@@ -875,7 +896,7 @@
       position: absolute;
       top: -100px; right: -100px;
       width: 300px; height: 300px;
-      background: radial-gradient(circle, rgba(123, 47, 255, 0.2), transparent 70%);
+      background: radial-gradient(circle, rgba(22, 112, 116, 0.2), transparent 70%);
       filter: blur(40px);
     }
     .showcase-text { position: relative; z-index: 1; }
@@ -883,7 +904,7 @@
     .showcase-text p { color: var(--text-muted); margin-bottom: 24px; font-size: 15px; line-height: 1.65; }
     .verticals { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 24px; }
     .vertical-pill {
-      background: rgba(0, 212, 255, 0.08);
+      background: rgba(33, 158, 164, 0.08);
       border: 1px solid var(--border);
       border-radius: 50px;
       padding: 8px 14px;
@@ -891,19 +912,19 @@
       text-align: center;
       transition: var(--transition);
     }
-    .vertical-pill:hover { background: rgba(0, 212, 255, 0.15); transform: scale(1.05); }
+    .vertical-pill:hover { background: rgba(33, 158, 164, 0.15); transform: scale(1.05); }
     .showcase-visual {
       aspect-ratio: 4/3;
       border-radius: var(--radius);
       background:
-        linear-gradient(135deg, rgba(0,212,255,0.15), rgba(123,47,255,0.15)),
-        repeating-linear-gradient(45deg, transparent 0 12px, rgba(0,212,255,0.04) 12px 13px);
+        linear-gradient(135deg, rgba(33,158,164,0.15), rgba(22,112,116,0.15)),
+        repeating-linear-gradient(45deg, transparent 0 12px, rgba(33,158,164,0.04) 12px 13px);
       border: 1px solid var(--border-hover);
       display: flex; flex-direction: column; align-items: center; justify-content: center;
       gap: 14px; padding: 24px; text-align: center;
       position: relative; z-index: 1;
     }
-    .showcase-visual .icon-cluster { font-size: 60px; filter: drop-shadow(0 0 16px rgba(0,212,255,0.4)); }
+    .showcase-visual .icon-cluster { font-size: 60px; filter: drop-shadow(0 0 16px rgba(33,158,164,0.4)); }
     .showcase-visual .visual-label { font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; color: var(--cyan); }
     .showcase-visual .visual-link { font-size: 13px; color: var(--text-muted); }
     @media (max-width: 800px) { .showcase { grid-template-columns: 1fr; padding: 32px 24px; } }
@@ -959,13 +980,13 @@
     .trust-logo.font-italic .logo-mark { font-style: italic; }
     /* Per-institution color palette */
     .trust-logo.c-ean { color: #0099d4; }
-    .trust-logo.c-poli { color: #ff8c00; }
+    .trust-logo.c-poli { color: #F7991E; }
     .trust-logo.c-jav { color: #f4cf3a; }
     .trust-logo.c-sena { color: #00a878; }
     .trust-logo.c-mincit { color: #4a90e2; }
     .trust-logo.c-innpulsa { color: #ec3d9a; }
     .trust-logo.c-mompreneurs { color: #d4147f; }
-    .trust-logo.c-gofest { color: #00d4ff; }
+    .trust-logo.c-gofest { color: #219EA4; }
     .trust-logo.c-confandi { color: #c6362e; }
     .trust-logo.c-camara { color: #003366; }
     .trust-logo.c-plaza { color: #b87333; }
@@ -1080,7 +1101,7 @@
       transform: translateX(6px);
       background: var(--card-bg-hov);
     }
-    .press-icon { font-size: 24px; flex-shrink: 0; filter: drop-shadow(0 0 8px rgba(0,212,255,0.3)); }
+    .press-icon { font-size: 24px; flex-shrink: 0; filter: drop-shadow(0 0 8px rgba(33,158,164,0.3)); }
     .press-info h5 { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 3px; }
     .press-info p { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
 
@@ -1100,7 +1121,7 @@
       aspect-ratio: 16/9;
       border-radius: var(--radius);
       background:
-        linear-gradient(135deg, rgba(0,212,255,0.10), rgba(123,47,255,0.10)),
+        linear-gradient(135deg, rgba(33,158,164,0.10), rgba(22,112,116,0.10)),
         var(--bg-card);
       border: 1px solid var(--border-hover);
       display: flex; flex-direction: column;
@@ -1120,8 +1141,8 @@
       animation: pulseRing 2.5s infinite;
     }
     @keyframes pulseRing {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(255,140,0,0.45); }
-      50% { box-shadow: 0 0 0 20px rgba(255,140,0,0); }
+      0%, 100% { box-shadow: 0 0 0 0 rgba(247,153,30,0.45); }
+      50% { box-shadow: 0 0 0 20px rgba(247,153,30,0); }
     }
     .play-btn svg { fill: #fff; margin-left: 4px; }
     .video-label { font-size: 13px; color: var(--text-muted); letter-spacing: 1.5px; text-transform: uppercase; }
@@ -1130,7 +1151,7 @@
        Capa contextual
     ============================================ */
     .context-layer {
-      background: linear-gradient(135deg, rgba(255,140,0,0.12) 0%, rgba(123,47,255,0.10) 100%);
+      background: linear-gradient(135deg, rgba(247,153,30,0.12) 0%, rgba(22,112,116,0.10) 100%);
       border: 1px dashed var(--border-hover);
       border-radius: var(--radius-lg);
       padding: 44px;
@@ -1142,7 +1163,7 @@
       position: absolute;
       top: -50px; right: -50px;
       width: 220px; height: 220px;
-      background: radial-gradient(circle, rgba(255,140,0,0.25) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(247,153,30,0.25) 0%, transparent 70%);
       filter: blur(40px);
     }
     .context-tag {
@@ -1315,7 +1336,7 @@
        Final CTA
     ============================================ */
     .final-cta {
-      background: linear-gradient(135deg, rgba(0,212,255,0.08) 0%, rgba(123,47,255,0.10) 100%);
+      background: linear-gradient(135deg, rgba(33,158,164,0.08) 0%, rgba(22,112,116,0.10) 100%);
       border: 1px solid var(--border-hover);
       border-radius: var(--radius-lg);
       padding: 60px 44px;
@@ -1328,7 +1349,7 @@
       position: absolute;
       top: -100px; left: 50%; transform: translateX(-50%);
       width: 600px; height: 300px;
-      background: radial-gradient(ellipse, rgba(0,212,255,0.15), transparent 70%);
+      background: radial-gradient(ellipse, rgba(33,158,164,0.15), transparent 70%);
       filter: blur(40px);
     }
     .final-cta > * { position: relative; z-index: 1; }
@@ -1431,7 +1452,7 @@
     <section class="hero">
       <div class="hero-text">
         <span class="eyebrow"><span class="pulse-dot"></span> Arquitecta Pedagógica · Magíster en Educación · Educadora experiencial</span>
-        <h1><span class="grad">Nathalia Velasco</span></h1>
+        <h1><span class="uppercase-brand">Nathalia</span> <span class="script grad">velasco</span></h1>
         <p class="accent-line">Diseño curricular · Ruta del Estudiante · Metodología replicable · Educación experiencial</p>
         <p class="role-line">
           <span>CEO Simoné — Creación Arte y Naturaleza</span> · Magíster en Educación (en curso) Universidad de la Sabana · Profesional en Estudios y Gestión Cultural EAN · Mentora de Innovación UP Holding · Ponente TEDx Agua Linda · Coordinadora Técnica Convenio Universidad Nacional + Secretaría de Cultura · Reconocida por LinkedIn Noticias y El Espectador
@@ -1498,7 +1519,7 @@
           de aprendizaje en niveles, integra el cuerpo y la creatividad como tecnologías de conocimiento, y cierra con
           sistemas de evaluación verificables. Este enfoque lo respaldan hoy <strong>Universidad de la Sabana,
           Universidad EAN, Universidad Nacional, Universidad de los Andes, Universidad del Rosario, Universidad Distrital,
-          Universidad Minuto de Dios, Secretaría de Cultura de Bogotá, MinCiT (vía iNNpulsa), Alcaldías de Usaquén,
+          Universidad Minuto de Dios, Secretaría de Cultura de Bogotá, UP Holding, Alcaldías de Usaquén,
           Bosa, Tunjuelito y Rafael Uribe Uribe</strong>, entre otras instituciones. Y se ha aplicado en más de
           <strong>10 sectores</strong>: educación formal y no formal, salud, banca, retail, fundaciones, gobierno,
           alimentos, publicidad, tecnología y formación corporativa.
@@ -2418,7 +2439,7 @@
       const ctx = canvas.getContext('2d');
       let particles = [];
       const COUNT = 65;
-      const COLORS = ['rgba(0,212,255,0.55)', 'rgba(123,47,255,0.45)', 'rgba(255,140,0,0.40)'];
+      const COLORS = ['rgba(33,158,164,0.55)', 'rgba(22,112,116,0.45)', 'rgba(247,153,30,0.40)'];
 
       function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
       window.addEventListener('resize', resize); resize();
@@ -2456,48 +2477,9 @@
               ctx.beginPath();
               ctx.moveTo(particles[i].x, particles[i].y);
               ctx.lineTo(particles[j].x, particles[j].y);
-              ctx.strokeStyle = 'rgba(0,212,255,' + (0.12 * (1 - d/120)) + ')';
+              ctx.strokeStyle = 'rgba(33,158,164,' + (0.12 * (1 - d/120)) + ')';
               ctx.lineWidth = 0.6; ctx.stroke();
             }
           }
         }
-        requestAnimationFrame(draw);
-      }
-      draw();
-    })();
-
-    /* Reveal */
-    (function() {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (e.isIntersecting) {
-            e.target.classList.add('visible');
-            if (e.target.classList.contains('stats')) animateCounters();
-            observer.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.15 });
-      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    })();
-
-    /* Counters */
-    function animateCounters() {
-      document.querySelectorAll('.stat-value[data-count]').forEach(el => {
-        const target = parseInt(el.dataset.count, 10);
-        const suffix = el.dataset.suffix || '';
-        const duration = 1600;
-        const start = performance.now();
-        function step(t) {
-          const p = Math.min((t - start) / duration, 1);
-          const eased = 1 - Math.pow(1 - p, 3);
-          const value = Math.floor(eased * target);
-          el.textContent = value.toLocaleString('es-CO') + suffix;
-          if (p < 1) requestAnimationFrame(step);
-        }
-        requestAnimationFrame(step);
-      });
-    }
-  </script>
-
-</body>
-</html>
+        requestAn
