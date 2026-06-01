@@ -2482,4 +2482,43 @@
             }
           }
         }
-        requestAn
+        requestAnimationFrame(draw);
+      }
+      draw();
+    })();
+
+    /* Reveal */
+    (function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            if (e.target.classList.contains('stats')) animateCounters();
+            observer.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    })();
+
+    /* Counters */
+    function animateCounters() {
+      document.querySelectorAll('.stat-value[data-count]').forEach(el => {
+        const target = parseInt(el.dataset.count, 10);
+        const suffix = el.dataset.suffix || '';
+        const duration = 1600;
+        const start = performance.now();
+        function step(t) {
+          const p = Math.min((t - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
+          const value = Math.floor(eased * target);
+          el.textContent = value.toLocaleString('es-CO') + suffix;
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      });
+    }
+  </script>
+
+</body>
+</html>
